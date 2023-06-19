@@ -1,0 +1,24 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ToDoDemo" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="CustomShapeOverlay" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_16</item>
+    </style>
+
+    <style name="roboto_regular_400">
+        <item name="fontWeight">400</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="roboto_regular_500">
+        <item name="fontWeight">500</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="rubik_regula_400">
+        <item name="fontWeight">400</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+</resources>

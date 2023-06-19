@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ToDo List</string>
+    <string name="add_task">Add a task</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="task_title">Task Title</string>
+    <string name="time">Time</string>
+    <string name="label_task_list">Task List</string>
+    <string name="dialog_tittle">Warning</string>
+    <string name="dialog_positive_btn_txt">OK</string>
+    <string name="dialog_negative_btn_txt">Cancel</string>
+    <string name="please_select_a_future_time">Please select a future time</string>
+    <string name="add_a_title_to_the_task">Add a title to the task</string>
+    <string name="task_added_successfully">Task added successfully</string>
+    <string name="work_in_progress">Work in progress</string>
+    <string name="menu_item_1">Sort by date</string>
+    <string name="menu_item_2">Sort by name</string>
+    <string name="add_a_task_by_clicking">Add a task by clicking \'+\' icon</string>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.todo.example.data.datasource.local.entity.TaskEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/white"
+        android:paddingVertical="@dimen/dp_13">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_task_status"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_16"
+            android:background="@drawable/check_box_selector"
+            android:button="@null"
+            android:buttonTint="@color/light_gray"
+            android:checked="true"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_task_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_task_tittle"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_task_tittle"
+            style="@style/roboto_regular_400"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{model.title}"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toTopOf="@+id/txt_task_status"
+            app:layout_constraintEnd_toStartOf="@id/txt_task_time"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cb_task_status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Benchmarking" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_task_status"
+            style="@style/rubik_regula_400"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/txt_task_tittle"
+            app:layout_constraintTop_toBottomOf="@+id/txt_task_tittle"
+            tools:text="Pending" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_task_time"
+            time="@{model.time}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/img_remove_task"
+            app:layout_constraintEnd_toStartOf="@id/img_remove_task"
+            app:layout_constraintTop_toTopOf="@id/img_remove_task"
+            tools:ignore="TextContrastCheck"
+            tools:text="08:00 AM" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_remove_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:padding="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close"
+            app:tint="@color/gray" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
